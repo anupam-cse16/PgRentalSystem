@@ -58,7 +58,7 @@ namespace CustomerServiceTest
         public void AddBookingDetailTest()
         {
             var bookingrepo = new BookingRepo(bookcontextmock.Object);
-            var bookingobj = bookingrepo.Book(new Booking { BookingDate = DateTime.Parse("15-10-2020 00:00:00"), No_ofMonth = 1, TotalCost = 6000.00 });
+            var bookingobj = bookingrepo.Book(new Booking { BookingId = 1, pg_Id = 1, UserId = 1, BookingDate = DateTime.Parse("15-10-2020 00:00:00"), No_ofMonth = 1, TotalCost = 6000.00 });
             Assert.IsNotNull(bookingobj);
         }
     }
