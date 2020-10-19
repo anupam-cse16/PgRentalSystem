@@ -1,0 +1,632 @@
+INFO  08:20:04 Application started. Press Ctrl+C to shut down.
+INFO  08:20:04 Application started. Press Ctrl+C to shut down.
+INFO  08:20:04 Hosting environment: Development
+INFO  08:20:04 Hosting environment: Development
+INFO  08:20:04 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  08:20:04 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  08:20:54 Get BookingDetails by Id accessed
+INFO  08:21:14 Get BookingDetails by Id accessed
+INFO  08:21:37 Get BookingDetails by Id accessed
+INFO  08:22:22 Get BookingDetails by Id accessed
+INFO  08:22:53 Get BookingDetails by Id accessed
+INFO  08:23:59 Application started. Press Ctrl+C to shut down.
+INFO  08:23:59 Application started. Press Ctrl+C to shut down.
+INFO  08:23:59 Hosting environment: Development
+INFO  08:23:59 Hosting environment: Development
+INFO  08:23:59 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  08:23:59 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  08:24:35 Get BookingDetails by Id accessed
+INFO  08:24:55 Get BookingDetails by Id accessed
+INFO  09:12:51 Application started. Press Ctrl+C to shut down.
+INFO  09:12:51 Application started. Press Ctrl+C to shut down.
+INFO  09:12:51 Hosting environment: Development
+INFO  09:12:51 Hosting environment: Development
+INFO  09:12:51 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:12:51 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:13:26 Get BookingDetails by Id accessed
+INFO  09:13:40 Get BookingDetails by Id accessed
+INFO  09:15:14 Book Details Getting Added
+ERROR 09:15:15 Failed executing DbCommand (354ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Double), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Bookings] ([BookingId], [BookingDate], [No_ofMonth], [TotalCost], [UserId], [pg_Id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+ERROR 09:15:15 Failed executing DbCommand (354ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Double), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Bookings] ([BookingId], [BookingDate], [No_ofMonth], [TotalCost], [UserId], [pg_Id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+ERROR 09:15:15 Connection ID "17870283327311708180", Request ID "80000015-0001-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.InvalidOperationException: There is already an open DataReader associated with this Connection which must be closed first.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Rollback()
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Dispose(Boolean disposing)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Dispose()
+   at Microsoft.Data.SqlClient.SqlTransaction.Dispose(Boolean disposing)
+   at System.Data.Common.DbTransaction.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextPool`1.Return(TContext context)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextPool`1.Lease.System.IAsyncDisposable.DisposeAsync()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<>c__DisplayClass15_0.<<DisposeAsync>g__Await|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Http.Features.RequestServicesFeature.<DisposeAsync>g__Awaited|9_0(RequestServicesFeature servicesFeature, ValueTask vt)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.FireOnCompleted()
+ERROR 09:15:15 Connection ID "17870283327311708180", Request ID "80000015-0001-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.InvalidOperationException: There is already an open DataReader associated with this Connection which must be closed first.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Rollback()
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Dispose(Boolean disposing)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Dispose()
+   at Microsoft.Data.SqlClient.SqlTransaction.Dispose(Boolean disposing)
+   at System.Data.Common.DbTransaction.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextPool`1.Return(TContext context)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextPool`1.Lease.System.IAsyncDisposable.DisposeAsync()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<>c__DisplayClass15_0.<<DisposeAsync>g__Await|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Http.Features.RequestServicesFeature.<DisposeAsync>g__Awaited|9_0(RequestServicesFeature servicesFeature, ValueTask vt)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.FireOnCompleted()
+ERROR 09:15:15 An exception occurred in the database while saving changes for context type 'CustomerService.BookingDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Bookings' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ddde3708-ca58-4733-8cba-70741e4668ce
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Bookings' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ddde3708-ca58-4733-8cba-70741e4668ce
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ERROR 09:15:15 An exception occurred in the database while saving changes for context type 'CustomerService.BookingDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Bookings' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ddde3708-ca58-4733-8cba-70741e4668ce
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Bookings' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ddde3708-ca58-4733-8cba-70741e4668ce
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+INFO  09:15:32 Get BookingDetails by Id accessed
+INFO  09:15:43 Get BookingDetails by Id accessed
+INFO  09:16:28 Book Details Getting Added
+ERROR 09:16:28 Connection ID "17798225728978812996", Request ID "80000045-0000-f700-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.InvalidOperationException: The connection does not support MultipleActiveResultSets.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Rollback()
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Dispose(Boolean disposing)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Dispose()
+   at Microsoft.Data.SqlClient.SqlTransaction.Dispose(Boolean disposing)
+   at System.Data.Common.DbTransaction.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextPool`1.Return(TContext context)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextPool`1.Lease.System.IAsyncDisposable.DisposeAsync()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<>c__DisplayClass15_0.<<DisposeAsync>g__Await|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Http.Features.RequestServicesFeature.<DisposeAsync>g__Awaited|9_0(RequestServicesFeature servicesFeature, ValueTask vt)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.FireOnCompleted()
+ERROR 09:16:28 Connection ID "17798225728978812996", Request ID "80000045-0000-f700-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.InvalidOperationException: The connection does not support MultipleActiveResultSets.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Rollback()
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Dispose(Boolean disposing)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Dispose()
+   at Microsoft.Data.SqlClient.SqlTransaction.Dispose(Boolean disposing)
+   at System.Data.Common.DbTransaction.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextPool`1.Return(TContext context)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextPool`1.Lease.System.IAsyncDisposable.DisposeAsync()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<>c__DisplayClass15_0.<<DisposeAsync>g__Await|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Http.Features.RequestServicesFeature.<DisposeAsync>g__Awaited|9_0(RequestServicesFeature servicesFeature, ValueTask vt)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.FireOnCompleted()
+ERROR 09:16:28 An exception occurred in the database while saving changes for context type 'CustomerService.BookingDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.Remove(Object entity, IEntityType entityType, EntityState oldState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.Update(InternalEntityEntry entry, EntityState state, Nullable`1 oldState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StateChanging(InternalEntityEntry entry, EntityState newState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.AcceptChanges()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.AcceptAllChanges(IReadOnlyList`1 changedEntries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.Remove(Object entity, IEntityType entityType, EntityState oldState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.Update(InternalEntityEntry entry, EntityState state, Nullable`1 oldState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StateChanging(InternalEntityEntry entry, EntityState newState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.AcceptChanges()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.AcceptAllChanges(IReadOnlyList`1 changedEntries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ERROR 09:16:28 An exception occurred in the database while saving changes for context type 'CustomerService.BookingDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.Remove(Object entity, IEntityType entityType, EntityState oldState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.Update(InternalEntityEntry entry, EntityState state, Nullable`1 oldState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StateChanging(InternalEntityEntry entry, EntityState newState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.AcceptChanges()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.AcceptAllChanges(IReadOnlyList`1 changedEntries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.Remove(Object entity, IEntityType entityType, EntityState oldState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.Update(InternalEntityEntry entry, EntityState state, Nullable`1 oldState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StateChanging(InternalEntityEntry entry, EntityState newState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.AcceptChanges()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.AcceptAllChanges(IReadOnlyList`1 changedEntries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+INFO  09:18:23 Application started. Press Ctrl+C to shut down.
+INFO  09:18:23 Application started. Press Ctrl+C to shut down.
+INFO  09:18:23 Hosting environment: Development
+INFO  09:18:23 Hosting environment: Development
+INFO  09:18:23 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:18:23 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:18:28 Get BookingDetails by Id accessed
+INFO  09:28:27 Application started. Press Ctrl+C to shut down.
+INFO  09:28:27 Application started. Press Ctrl+C to shut down.
+INFO  09:28:27 Hosting environment: Development
+INFO  09:28:27 Hosting environment: Development
+INFO  09:28:27 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:28:27 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:29:57 Application started. Press Ctrl+C to shut down.
+INFO  09:29:57 Application started. Press Ctrl+C to shut down.
+INFO  09:29:57 Hosting environment: Development
+INFO  09:29:57 Hosting environment: Development
+INFO  09:29:58 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:29:58 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:31:05 Book Details Getting Added
+ERROR 09:31:08 An error occurred using the connection to database 'PgService' on server '(localdb)\MSSQLLocalDB'.
+ERROR 09:31:08 An error occurred using the connection to database 'PgService' on server '(localdb)\MSSQLLocalDB'.
+INFO  09:33:30 Application started. Press Ctrl+C to shut down.
+INFO  09:33:30 Application started. Press Ctrl+C to shut down.
+INFO  09:33:30 Hosting environment: Development
+INFO  09:33:30 Hosting environment: Development
+INFO  09:33:30 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:33:30 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:34:42 Book Details Getting Added
+ERROR 09:34:44 An error occurred using the connection to database 'PgService' on server '(localdb)\MSSQLLocalDB'.
+ERROR 09:34:44 An error occurred using the connection to database 'PgService' on server '(localdb)\MSSQLLocalDB'.
+INFO  09:36:56 Application started. Press Ctrl+C to shut down.
+INFO  09:36:56 Application started. Press Ctrl+C to shut down.
+INFO  09:36:56 Hosting environment: Development
+INFO  09:36:56 Hosting environment: Development
+INFO  09:36:57 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:36:57 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:37:39 Book Details Getting Added
+ERROR 09:38:05 An error occurred using the connection to database 'PgService' on server '(localdb)\MSSQLLocalDB'.
+ERROR 09:38:05 An error occurred using the connection to database 'PgService' on server '(localdb)\MSSQLLocalDB'.
+INFO  09:40:30 Application started. Press Ctrl+C to shut down.
+INFO  09:40:30 Application started. Press Ctrl+C to shut down.
+INFO  09:40:30 Hosting environment: Development
+INFO  09:40:30 Hosting environment: Development
+INFO  09:40:30 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:40:30 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:41:19 Book Details Getting Added
+ERROR 09:41:48 An error occurred using the connection to database 'PgService' on server '(localdb)\MSSQLLocalDB'.
+ERROR 09:41:48 An error occurred using the connection to database 'PgService' on server '(localdb)\MSSQLLocalDB'.
+INFO  09:47:31 Application started. Press Ctrl+C to shut down.
+INFO  09:47:31 Application started. Press Ctrl+C to shut down.
+INFO  09:47:31 Hosting environment: Development
+INFO  09:47:31 Hosting environment: Development
+INFO  09:47:31 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:47:31 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:48:11 Book Details Getting Added
+ERROR 09:48:33 An error occurred using the connection to database 'PgService' on server '(localdb)\MSSQLLocalDB'.
+ERROR 09:48:33 An error occurred using the connection to database 'PgService' on server '(localdb)\MSSQLLocalDB'.
+INFO  09:49:08 Get BookingDetails by Id accessed
+INFO  09:56:38 Application started. Press Ctrl+C to shut down.
+INFO  09:56:38 Application started. Press Ctrl+C to shut down.
+INFO  09:56:38 Hosting environment: Development
+INFO  09:56:38 Hosting environment: Development
+INFO  09:56:38 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:56:38 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:57:11 Book Details Getting Added
+INFO  09:59:03 Application started. Press Ctrl+C to shut down.
+INFO  09:59:03 Application started. Press Ctrl+C to shut down.
+INFO  09:59:03 Hosting environment: Development
+INFO  09:59:03 Hosting environment: Development
+INFO  09:59:03 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:59:03 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:00:12 Book Details Getting Added
+INFO  10:47:55 Application started. Press Ctrl+C to shut down.
+INFO  10:47:55 Application started. Press Ctrl+C to shut down.
+INFO  10:47:55 Hosting environment: Development
+INFO  10:47:55 Hosting environment: Development
+INFO  10:47:55 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:47:55 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:51:17 Get BookingDetails by Id accessed
+INFO  10:55:00 Application started. Press Ctrl+C to shut down.
+INFO  10:55:00 Application started. Press Ctrl+C to shut down.
+INFO  10:55:00 Hosting environment: Development
+INFO  10:55:00 Hosting environment: Development
+INFO  10:55:00 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:55:00 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:55:55 Get BookingDetails by Id accessed
+INFO  10:58:50 Application started. Press Ctrl+C to shut down.
+INFO  10:58:50 Application started. Press Ctrl+C to shut down.
+INFO  10:58:50 Hosting environment: Development
+INFO  10:58:50 Hosting environment: Development
+INFO  10:58:50 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:58:50 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:59:41 Get BookingDetails by Id accessed
+INFO  11:05:16 Application started. Press Ctrl+C to shut down.
+INFO  11:05:16 Application started. Press Ctrl+C to shut down.
+INFO  11:05:16 Hosting environment: Development
+INFO  11:05:16 Hosting environment: Development
+INFO  11:05:16 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:05:16 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:05:58 Get BookingDetails by Id accessed
+INFO  11:11:49 Application started. Press Ctrl+C to shut down.
+INFO  11:11:49 Application started. Press Ctrl+C to shut down.
+INFO  11:11:49 Hosting environment: Development
+INFO  11:11:49 Hosting environment: Development
+INFO  11:11:49 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:11:49 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:14:03 Application started. Press Ctrl+C to shut down.
+INFO  11:14:03 Application started. Press Ctrl+C to shut down.
+INFO  11:14:04 Hosting environment: Development
+INFO  11:14:04 Hosting environment: Development
+INFO  11:14:04 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:14:04 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:14:35 Get BookingDetails by Id accessed
+INFO  11:15:53 Get BookingDetails by Id accessed
+INFO  11:22:15 Application started. Press Ctrl+C to shut down.
+INFO  11:22:15 Application started. Press Ctrl+C to shut down.
+INFO  11:22:15 Hosting environment: Development
+INFO  11:22:15 Hosting environment: Development
+INFO  11:22:15 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:22:15 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:22:38 Get BookingDetails by Id accessed
+INFO  11:23:26 Book Details Getting Added
+INFO  11:23:50 Get BookingDetails by Id accessed
+INFO  11:24:47 Application started. Press Ctrl+C to shut down.
+INFO  11:24:47 Application started. Press Ctrl+C to shut down.
+INFO  11:24:47 Hosting environment: Development
+INFO  11:24:47 Hosting environment: Development
+INFO  11:24:47 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:24:47 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:25:11 Get BookingDetails by Id accessed
+INFO  11:25:43 Book Details Getting Added
+INFO  11:26:05 Get BookingDetails by Id accessed
+INFO  10:24:09 Application started. Press Ctrl+C to shut down.
+INFO  10:24:09 Application started. Press Ctrl+C to shut down.
+INFO  10:24:10 Hosting environment: Development
+INFO  10:24:10 Hosting environment: Development
+INFO  10:24:10 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:24:10 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:28:59 Book Details Getting Added
+INFO  10:29:28 Get BookingDetails by Id accessed
+INFO  10:36:12 Application started. Press Ctrl+C to shut down.
+INFO  10:36:12 Application started. Press Ctrl+C to shut down.
+INFO  10:36:12 Hosting environment: Development
+INFO  10:36:12 Hosting environment: Development
+INFO  10:36:12 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:36:12 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:51:12 Application started. Press Ctrl+C to shut down.
+INFO  10:51:12 Application started. Press Ctrl+C to shut down.
+INFO  10:51:12 Hosting environment: Development
+INFO  10:51:12 Hosting environment: Development
+INFO  10:51:12 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:51:12 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:54:18 Application started. Press Ctrl+C to shut down.
+INFO  10:54:18 Application started. Press Ctrl+C to shut down.
+INFO  10:54:18 Hosting environment: Development
+INFO  10:54:18 Hosting environment: Development
+INFO  10:54:18 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:54:18 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:07:24 Application started. Press Ctrl+C to shut down.
+INFO  11:07:24 Application started. Press Ctrl+C to shut down.
+INFO  11:07:24 Hosting environment: Development
+INFO  11:07:24 Hosting environment: Development
+INFO  11:07:24 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:07:24 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:10:54 Application started. Press Ctrl+C to shut down.
+INFO  11:10:54 Application started. Press Ctrl+C to shut down.
+INFO  11:10:54 Hosting environment: Development
+INFO  11:10:54 Hosting environment: Development
+INFO  11:10:54 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:10:54 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:12:44 Application started. Press Ctrl+C to shut down.
+INFO  11:12:44 Application started. Press Ctrl+C to shut down.
+INFO  11:12:44 Hosting environment: Development
+INFO  11:12:44 Hosting environment: Development
+INFO  11:12:44 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:12:44 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:16:43 Application started. Press Ctrl+C to shut down.
+INFO  11:16:44 Application started. Press Ctrl+C to shut down.
+INFO  11:16:44 Hosting environment: Development
+INFO  11:16:44 Hosting environment: Development
+INFO  11:16:44 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:16:44 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:25:23 Application started. Press Ctrl+C to shut down.
+INFO  11:25:23 Application started. Press Ctrl+C to shut down.
+INFO  11:25:23 Hosting environment: Development
+INFO  11:25:23 Hosting environment: Development
+INFO  11:25:23 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:25:23 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:31:32 Application started. Press Ctrl+C to shut down.
+INFO  11:31:32 Application started. Press Ctrl+C to shut down.
+INFO  11:31:32 Hosting environment: Development
+INFO  11:31:32 Hosting environment: Development
+INFO  11:31:32 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:31:32 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:35:17 Application started. Press Ctrl+C to shut down.
+INFO  11:35:17 Application started. Press Ctrl+C to shut down.
+INFO  11:35:18 Hosting environment: Development
+INFO  11:35:18 Hosting environment: Development
+INFO  11:35:18 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:35:18 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:36:45 Application started. Press Ctrl+C to shut down.
+INFO  11:36:45 Application started. Press Ctrl+C to shut down.
+INFO  11:36:45 Hosting environment: Development
+INFO  11:36:45 Hosting environment: Development
+INFO  11:36:45 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:36:45 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:46:05 Application started. Press Ctrl+C to shut down.
+INFO  11:46:05 Application started. Press Ctrl+C to shut down.
+INFO  11:46:05 Hosting environment: Development
+INFO  11:46:05 Hosting environment: Development
+INFO  11:46:05 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:46:05 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:53:34 Application started. Press Ctrl+C to shut down.
+INFO  11:53:34 Application started. Press Ctrl+C to shut down.
+INFO  11:53:34 Hosting environment: Development
+INFO  11:53:34 Hosting environment: Development
+INFO  11:53:34 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  11:53:34 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  12:01:59 Application started. Press Ctrl+C to shut down.
+INFO  12:01:59 Application started. Press Ctrl+C to shut down.
+INFO  12:01:59 Hosting environment: Development
+INFO  12:01:59 Hosting environment: Development
+INFO  12:01:59 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  12:01:59 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  03:53:10 Application started. Press Ctrl+C to shut down.
+INFO  03:53:10 Application started. Press Ctrl+C to shut down.
+INFO  03:53:10 Hosting environment: Development
+INFO  03:53:10 Hosting environment: Development
+INFO  03:53:10 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  03:53:10 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:04:16 Application started. Press Ctrl+C to shut down.
+INFO  04:04:16 Application started. Press Ctrl+C to shut down.
+INFO  04:04:16 Hosting environment: Development
+INFO  04:04:16 Hosting environment: Development
+INFO  04:04:16 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:04:16 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:08:06 Application started. Press Ctrl+C to shut down.
+INFO  04:08:06 Application started. Press Ctrl+C to shut down.
+INFO  04:08:06 Hosting environment: Development
+INFO  04:08:06 Hosting environment: Development
+INFO  04:08:06 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:08:06 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:13:34 Application started. Press Ctrl+C to shut down.
+INFO  04:13:34 Application started. Press Ctrl+C to shut down.
+INFO  04:13:34 Hosting environment: Development
+INFO  04:13:34 Hosting environment: Development
+INFO  04:13:34 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:13:34 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:21:45 Application started. Press Ctrl+C to shut down.
+INFO  04:21:45 Application started. Press Ctrl+C to shut down.
+INFO  04:21:45 Hosting environment: Development
+INFO  04:21:45 Hosting environment: Development
+INFO  04:21:45 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:21:45 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:28:19 Application started. Press Ctrl+C to shut down.
+INFO  04:28:19 Application started. Press Ctrl+C to shut down.
+INFO  04:28:19 Hosting environment: Development
+INFO  04:28:19 Hosting environment: Development
+INFO  04:28:19 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:28:19 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:30:15 Application started. Press Ctrl+C to shut down.
+INFO  04:30:15 Application started. Press Ctrl+C to shut down.
+INFO  04:30:15 Hosting environment: Development
+INFO  04:30:15 Hosting environment: Development
+INFO  04:30:15 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:30:15 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:37:16 Application started. Press Ctrl+C to shut down.
+INFO  04:37:16 Application started. Press Ctrl+C to shut down.
+INFO  04:37:16 Hosting environment: Development
+INFO  04:37:16 Hosting environment: Development
+INFO  04:37:16 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:37:16 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:41:40 Application started. Press Ctrl+C to shut down.
+INFO  04:41:40 Application started. Press Ctrl+C to shut down.
+INFO  04:41:40 Hosting environment: Development
+INFO  04:41:40 Hosting environment: Development
+INFO  04:41:40 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:41:40 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:48:54 Application started. Press Ctrl+C to shut down.
+INFO  04:48:54 Application started. Press Ctrl+C to shut down.
+INFO  04:48:54 Hosting environment: Development
+INFO  04:48:54 Hosting environment: Development
+INFO  04:48:54 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:48:54 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:54:46 Application started. Press Ctrl+C to shut down.
+INFO  04:54:46 Application started. Press Ctrl+C to shut down.
+INFO  04:54:46 Hosting environment: Development
+INFO  04:54:46 Hosting environment: Development
+INFO  04:54:46 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:54:46 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:56:09 Book Details Getting Added
+INFO  04:56:45 Get BookingDetails by Id accessed
+INFO  05:00:05 Application started. Press Ctrl+C to shut down.
+INFO  05:00:05 Application started. Press Ctrl+C to shut down.
+INFO  05:00:05 Hosting environment: Development
+INFO  05:00:05 Hosting environment: Development
+INFO  05:00:06 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  05:00:06 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  05:00:44 Book Details Getting Added
+INFO  05:02:44 Get BookingDetails by Id accessed
+INFO  05:04:48 Application started. Press Ctrl+C to shut down.
+INFO  05:04:48 Application started. Press Ctrl+C to shut down.
+INFO  05:04:48 Hosting environment: Development
+INFO  05:04:48 Hosting environment: Development
+INFO  05:04:48 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  05:04:48 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  05:08:04 Application started. Press Ctrl+C to shut down.
+INFO  05:08:04 Application started. Press Ctrl+C to shut down.
+INFO  05:08:04 Hosting environment: Development
+INFO  05:08:04 Hosting environment: Development
+INFO  05:08:04 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  05:08:04 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  05:08:57 Book Details Getting Added
+INFO  05:09:03 Get BookingDetails by Id accessed
+INFO  09:06:00 Application started. Press Ctrl+C to shut down.
+INFO  09:06:00 Application started. Press Ctrl+C to shut down.
+INFO  09:06:00 Hosting environment: Development
+INFO  09:06:00 Hosting environment: Development
+INFO  09:06:00 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:06:00 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:07:07 Book Details Getting Added
+INFO  09:07:14 Get BookingDetails by Id accessed
+INFO  10:14:58 Application started. Press Ctrl+C to shut down.
+INFO  10:14:58 Application started. Press Ctrl+C to shut down.
+INFO  10:14:58 Hosting environment: Development
+INFO  10:14:58 Hosting environment: Development
+INFO  10:14:59 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:14:59 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:53:46 Application started. Press Ctrl+C to shut down.
+INFO  10:53:46 Application started. Press Ctrl+C to shut down.
+INFO  10:53:46 Hosting environment: Development
+INFO  10:53:46 Hosting environment: Development
+INFO  10:53:46 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:53:46 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  10:54:27 Book Details Getting Added
+INFO  10:54:31 Get BookingDetails by Id accessed
+INFO  04:44:00 Application started. Press Ctrl+C to shut down.
+INFO  04:44:00 Application started. Press Ctrl+C to shut down.
+INFO  04:44:00 Hosting environment: Development
+INFO  04:44:00 Hosting environment: Development
+INFO  04:44:00 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:44:00 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  04:45:13 Book Details Getting Added
+INFO  07:52:23 Application started. Press Ctrl+C to shut down.
+INFO  07:52:23 Application started. Press Ctrl+C to shut down.
+INFO  07:52:23 Hosting environment: Development
+INFO  07:52:23 Hosting environment: Development
+INFO  07:52:23 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  07:52:23 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  07:53:11 Book Details Getting Added
+INFO  07:56:35 Book Details Getting Added
+INFO  08:38:29 Application started. Press Ctrl+C to shut down.
+INFO  08:38:29 Application started. Press Ctrl+C to shut down.
+INFO  08:38:29 Hosting environment: Development
+INFO  08:38:29 Hosting environment: Development
+INFO  08:38:29 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  08:38:29 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  08:39:00 Get BookingDetails by Id accessed
+INFO  08:39:15 Book Details Getting Added
+INFO  08:39:53 Get BookingDetails by Id accessed
+INFO  08:35:27 Application started. Press Ctrl+C to shut down.
+INFO  08:35:27 Application started. Press Ctrl+C to shut down.
+INFO  08:35:27 Hosting environment: Development
+INFO  08:35:27 Hosting environment: Development
+INFO  08:35:27 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  08:35:27 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  08:36:40 Book Details Getting Added
+INFO  08:36:46 Get BookingDetails by Id accessed
+INFO  09:37:06 Application started. Press Ctrl+C to shut down.
+INFO  09:37:06 Application started. Press Ctrl+C to shut down.
+INFO  09:37:06 Hosting environment: Development
+INFO  09:37:06 Hosting environment: Development
+INFO  09:37:07 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:37:07 Content root path: D:\.NET\Pg_Rental_System\CustomerService
+INFO  09:38:07 Book Details Getting Added
+INFO  09:38:13 Get BookingDetails by Id accessed
